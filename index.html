@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Ignore WebSocket / HMR errors per AI Studio environment constraints (HMR: Disabled. Ignore WebSocket errors.)
+      window.addEventListener('unhandledrejection', function (e) {
+        var msg = (e && e.reason && (e.reason.message || e.reason.stack || String(e.reason))) || '';
+        if (msg.includes('WebSocket') || msg.includes('vite:ws') || msg.includes('closed without opened')) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      });
+      window.addEventListener('error', function (e) {
+        var msg = (e && (e.message || '')) || '';
+        if (msg.includes('WebSocket') || msg.includes('vite:ws') || msg.includes('closed without opened')) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeakLens — Smart Water Leakage Intelligence Platform</title>
+    <meta name="description" content="Enterprise smart water leakage detection, risk scoring, hotspot visualization, and maintenance incident tracking for residential campuses and hostels." />
+    <meta property="og:title" content="LeakLens — Smart Water Leakage Intelligence Platform" />
+    <meta property="og:description" content="Enterprise smart water leakage detection, risk scoring, hotspot visualization, and maintenance incident tracking for residential campuses and hostels." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

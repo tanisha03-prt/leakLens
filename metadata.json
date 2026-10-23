@@ -1,0 +1,6 @@
+{
+  "name": "LeakLens — Smart Water Leakage Intelligence Platform",
+  "description": "Enterprise smart water leakage detection, risk scoring, hotspot visualization, and maintenance incident tracking for residential campuses and hostels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
